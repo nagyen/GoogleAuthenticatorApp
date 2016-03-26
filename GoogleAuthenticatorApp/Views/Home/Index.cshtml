@@ -1,0 +1,17 @@
+﻿@model GoogleAuthenticatorApp.Models.GoogleAuthModels.AuthRequest
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <img id="qrcode" src="@Model.QRCodeImageUrl"/>
+    <br/>
+    <span>Manual Entry Code @Model.ManualEntrySetupCode</span>
+    <br/>
+    <div class="form-group">
+        <label for="userkey">Enter Valid Key</label>
+        <input type="text" class="form-control" id="userkey" name="userkey" />
+        <a class="btn btn-default" onclick="validateKey()">Validate key</a>
+    </div>
+    
+</div>
